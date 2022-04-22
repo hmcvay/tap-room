@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function TapDetails(props) {
+  const {tap} = props;
   return(
     <React.Fragment>
       <h3>

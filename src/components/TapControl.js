@@ -1,6 +1,7 @@
 import React from "react";
 import TapList from "./TapList";
 import NewTapForm from "./NewTapForm";
+import TapDetails from "./TapDetails";
 
 class TapControl extends React.Component {
 
@@ -29,6 +30,14 @@ class TapControl extends React.Component {
 
     handleEditingClick = () => {
       this.setState({ editing: true });
+    };
+
+    handleAddingNewTapToList = (newTap) => {
+      const newMainTapList = this.state.mainTapList.concat(newTap);
+      this.setState({
+        mainTapList: newMainTapList,
+        selectedTap: newTap,
+      });
     };
 
     render(); {
