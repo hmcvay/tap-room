@@ -1,5 +1,6 @@
 import React from "react";
 import TapList from "./TapList";
+import NewTapForm from "./NewTapForm";
 
 class TapControl extends React.Component {
 
@@ -7,10 +8,25 @@ class TapControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainTapList: []
+      mainTapList: [],
+      selectedTap: null
     };
 
-    this.render() {
+    handleButtonClick = () => {
+      if(this.state.selectedTap !== null || this.state.formVisibleOnPage){
+        this.setState(() => ({
+          formVisibleOnPage: false,
+          selectedTap: null
+        }));
+      } else {
+        this.setState(() => ({
+          formVisibleOnPage: true,
+          selectedTap: null,
+        }));
+      }
+    };
+
+    this.render(); {
       const currentTapList = this.state.mainTapList;
     }
     return(
@@ -21,3 +37,5 @@ class TapControl extends React.Component {
     
   }
 }
+
+export default TapControl;
