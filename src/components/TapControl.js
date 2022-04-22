@@ -4,12 +4,13 @@ import NewTapForm from "./NewTapForm";
 
 class TapControl extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       formVisibleOnPage: false,
       mainTapList: [],
-      selectedTap: null
+      selectedTap: null,
+      editing: false
     };
 
     handleButtonClick = () => {
@@ -26,12 +27,25 @@ class TapControl extends React.Component {
       }
     };
 
-    this.render(); {
+    handleEditingClick = () => {
+      this.setState({ editing: true });
+    };
+
+    render(); {
       const currentTapList = this.state.mainTapList;
+      let currentlyVisibleState = null;
+      let descriptionButtonText = null;
     }
     return(
       <React.Fragment>
-        <TapList currentTapList={currentTapList} />
+        <TapList 
+        currentTapList={currentTapList}
+        onTapSelection={this.handleChangingSelectedTap} 
+        />
+        {currentlyVisibleState}
+        <button onClick={this.handleButtonClick}>
+          {descriptionButtonText}
+        </button>
       </React.Fragment>
     )
     
