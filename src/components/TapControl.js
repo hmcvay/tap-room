@@ -1,5 +1,5 @@
 import React from "react";
-import Tap from "./Tap";
+import TapList from "./TapList";
 
 class TapControl extends React.Component {
 
