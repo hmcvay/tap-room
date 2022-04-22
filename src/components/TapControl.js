@@ -40,6 +40,23 @@ class TapControl extends React.Component {
       });
     };
 
+    handleChangeSelectedTap = (id) => {
+      const selectedTap = this.state.mainTapList.filter(
+        (tap) => tap.id === id
+      )[0];
+      this.setState({ selectedTap: selectedTap });
+    };
+
+    handleChangingBeersSold = (id, numberOfDrinks) => {
+      let soldTap = this.state.mainTapList.filter((tap) => tap.id === id)[0];
+      soldTap.beersSold += numberOfDrinks;
+      this.setState({
+        mainTapList: this.state.mainTapList
+          .filter((tap) => tap.id !== id)
+          .concat(soldTap),
+      });
+    };
+
     render(); {
       const currentTapList = this.state.mainTapList;
       let currentlyVisibleState = null;
