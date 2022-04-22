@@ -4,10 +4,17 @@ import PropTypes from "prop-types";
 function Tap(props){
   return(
     <React.Fragment>
-      <p>{props.name}</p>
-      <p>{props.price}</p>
-      <p>{props.abv}</p>
-      <p>{props.beersSold}</p>
+      onClick={() => props.whenTapClicked(props.id)}
+      <h4>
+        {props.brand} {props.name}
+      </h4>
+      <p>${props.price} per pint</p>
+      <p>{props.abv}% ABV</p>
+      if({props.beersSold >= 124}){
+        <p>Sorry, all out!</p>
+      } else {
+        <p>{124 - props.beersSold} pints remaining.</p>
+      }
     </React.Fragment>
   )
 }
