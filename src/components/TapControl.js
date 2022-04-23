@@ -57,10 +57,29 @@ class TapControl extends React.Component {
       });
     };
 
+    handleTapEditingInList = (tapToEdit) => {
+      const editedMainTapList = this.state.mainTapList
+        .filter((tap) => tap.id !== this.state.selectedTap.id)
+        .concat(tapToEdit);
+      this.setState({
+        mainTapList: editedMainTapList,
+        editing: false,
+        selectedTap: null,
+      });
+    };
+
     render(); {
       const currentTapList = this.state.mainTapList;
       let currentlyVisibleState = null;
       let descriptionButtonText = null;
+      if (this.state.formVisibleOnPage) {
+        currentlyVisibleState = (
+          <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
+        );
+      } else {
+        descriptionButtonText = "Add Tap";
+      }
+    
     }
     return(
       <React.Fragment>

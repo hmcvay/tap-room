@@ -15,6 +15,7 @@ function Tap(props){
       } else {
         <p>{124 - props.beersSold} pints remaining.</p>
       }
+      {/* if/else not working? maybe have to alter syntax for jsx? */}
     </React.Fragment>
   )
 }
