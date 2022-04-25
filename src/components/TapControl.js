@@ -32,7 +32,8 @@ class TapControl extends React.Component {
       if(this.state.selectedTap !== null || this.state.formVisibleOnPage){
         this.setState(() => ({
           formVisibleOnPage: false,
-          selectedTap: null
+          selectedTap: null,
+          editing: false,
         }));
       } else {
         this.setState(() => ({
@@ -82,7 +83,7 @@ class TapControl extends React.Component {
       });
     };
 
-    render(); {
+    render() {
       const currentTapList = this.state.mainTapList;
       let currentlyVisibleState = null;
       let descriptionButtonText = null;
@@ -94,8 +95,8 @@ class TapControl extends React.Component {
         descriptionButtonText = "Add Tap";
       }
     
-    }
-    return(
+    
+    return (
       <React.Fragment>
         <TapList 
         currentTapList={currentTapList}
