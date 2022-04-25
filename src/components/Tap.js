@@ -6,25 +6,36 @@ function Tap(props){
     <React.Fragment>
       onClick={() => props.whenTapClicked(props.id)}
       <h4>
-        {props.brand} {props.name}
+        {props.name} by {props.brand}
       </h4>
       <p>${props.price} per pint</p>
       <p>{props.abv}% ABV</p>
-      if({props.beersSold >= 124}){
-        <p>Sorry, all out!</p>
-      } else {
-        <p>{124 - props.beersSold} pints remaining.</p>
-      }
-      {/* if/else not working? maybe have to alter syntax for jsx? */}
+      <p>
+        {props.beersSold >= 124 ? (
+          <span>Sorry, all out!</span>
+        ) : (
+          <span>
+            <p>{124 - props.beersSold} Pints remaining</p>
+            <p><button onClick={() => props.whenBeerSold(props.id, 1)}>Sell Pint</button>
+            </p>
+          </span>  
+        )}  
+      </p>
     </React.Fragment>
-  )
+  );
 }
+
+Tap.defaultProps = {
+  beersSold:0,
+};
 
 Tap.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   abv: PropTypes.number.isRequired,
   beersSold: PropTypes.number,
-}
+  whenTapClicked: PropTypes.func,
+  onChangingBeersSold: PropTypes.func,
+};
 
 export default Tap;
