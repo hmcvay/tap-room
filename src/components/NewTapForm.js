@@ -12,6 +12,7 @@ function NewTapForm(props) {
       abv: parseFloat(event.target.abv.value),
       price: parseFloat(event.target.price.value),
       description: (event.target.description.value),
+      beersSold: parseInt(event.target.beersSold.value),
       id: v4(),
     });
   }
