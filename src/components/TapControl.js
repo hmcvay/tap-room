@@ -104,9 +104,7 @@ export class TapControl extends React.Component {
         />
       );
       descriptionButtonText = "something else";
-
-    }
-    if (this.state.formVisibleOnPage) {
+    } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = (
         <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
       );
@@ -118,14 +116,14 @@ export class TapControl extends React.Component {
         <TapList 
         currentTapList={currentTapList}
         onTapSelection={this.handleChangingSelectedTap} 
+        onChangingBeersSold={this.handleChangingBeersSold}
         />
         {currentlyVisibleState}
         <button onClick={this.handleButtonClick}>
           {descriptionButtonText}
         </button>
       </React.Fragment>
-    )
-    
+    );  
   }
 }
 
