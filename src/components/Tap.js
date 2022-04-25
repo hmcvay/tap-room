@@ -48,7 +48,7 @@ Tap.propTypes = {
   abv: PropTypes.number.isRequired,
   beersSold: PropTypes.number,
   whenTapClicked: PropTypes.func,
-  onChangingBeersSold: PropTypes.func,
+  // onChangingBeersSold: PropTypes.func,
 };
 
 export default Tap;

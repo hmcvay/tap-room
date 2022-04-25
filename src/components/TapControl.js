@@ -4,8 +4,8 @@ import NewTapForm from "./NewTapForm";
 import TapDetails from "./TapDetails";
 import EditTapForm from "./EditTapForm";
 
-export class TapControl extends React.Component {
-
+class TapControl extends React.Component {
+  
   constructor() {
     super();
     this.state = {
@@ -57,9 +57,7 @@ export class TapControl extends React.Component {
   };
 
   handleChangeSelectedTap = (id) => {
-    const selectedTap = this.state.mainTapList.filter(
-      (tap) => tap.id === id
-    )[0];
+    const selectedTap = this.state.mainTapList.filter((tap) => tap.id === id)[0];
     this.setState({ selectedTap: selectedTap });
   };
 
