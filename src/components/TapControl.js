@@ -2,6 +2,7 @@ import React from "react";
 import TapList from "./TapList";
 import NewTapForm from "./NewTapForm";
 import TapDetails from "./TapDetails";
+import EditTapForm from "./EditTapForm";
 
 class TapControl extends React.Component {
 
@@ -9,10 +10,23 @@ class TapControl extends React.Component {
     super();
     this.state = {
       formVisibleOnPage: false,
-      mainTapList: [],
+      mainTapList: [
+        {
+          name: "The White Lodge",
+          brand: "Holy Mountain Brewing",
+          price: 7,
+          abv: 4.8,
+          beersSold: 0,
+          description:
+            "A classic rendition of a Belgian wit, The White Lodge is brewed with a large portion of wheat along with pilsner malt and oats. We use coriander and orange peel in the kettle, lending a blend of citrus and floral characters, and ferment with a traditional Belgian strain.",
+          id: 1,
+          key: 4,
+        },
+      ],
       selectedTap: null,
       editing: false
     };
+  }
 
     handleButtonClick = () => {
       if(this.state.selectedTap !== null || this.state.formVisibleOnPage){
