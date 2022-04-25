@@ -5,8 +5,12 @@ import TapControl from "./TapControl";
 function App() {
   return (
     <React.Fragment>
-      <Header />
-      <TapControl />
+      <div className="header-wrapper">
+        <div><Header /></div>
+      </div>
+      <div className="body-wrapper">
+        <div><TapControl /></div>   
+      </div>
     </React.Fragment>
   );
 }

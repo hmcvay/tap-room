@@ -5,31 +5,35 @@ function ReusableForm(props) {
   return(
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
-        <label htmlfor="name">Name:</label>
-        <input type="text" name="name" placeholder="Name of Beer" />
+        <label htmlfor="name">Name: </label>
+        <input type="text" name="name" placeholder="Name" />
         <br />
 
-        <label htmlfor="abv">Alcohol Content by Volume:</label>
+        <label htmlfor="brand">Brand: </label>
+        <input type="text" name="brand" placeholder="Brand" />
+        <br />
+
+        <label htmlfor="abv">ABV: </label>
         <input 
         type="number" 
         name="abv" 
-        placeholder="abv%"
+        placeholder="%"
         min="0"
         step=".1"
         />
         <br />
 
-        <label htmlfor="price">Price per pint:</label>
+        <label htmlfor="price">Price per pint: </label>
         <input 
         type="number"
         name="price"
-        placeholder="Price"
+        placeholder="$"
         min="0"
         step=".5"
         />
         <br />
 
-        <label htmlFor="beersSold">Number of pints sold:</label>
+        <label htmlFor="beersSold">Pints sold: </label>
         <input 
         type="number"
         name="beersSold"
@@ -40,7 +44,7 @@ function ReusableForm(props) {
         />
         <br />
 
-        <label htmlFor="description">Description:</label>
+        <label htmlFor="description">Description: </label>
         <textarea name="description" placeholder="Description" />
         <br />
 

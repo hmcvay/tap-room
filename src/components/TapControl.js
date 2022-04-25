@@ -90,38 +90,48 @@ export class TapControl extends React.Component {
     let descriptionButtonText = null;
     if (this.state.editing) {
       currentlyVisibleState = (
-        <EditTapForm
-          tap={this.state.selectedTap}
-          onEditTap={this.handleTapEditingInList}
-        />
+        <div>
+          <EditTapForm
+            tap={this.state.selectedTap}
+            onEditTap={this.handleTapEditingInList}
+          />
+        </div>
       );
       descriptionButtonText = "something";
     } else if (this.state.selectedTap !== null) {
       currentlyVisibleState = (
-        <TapDetails 
-        tap={this.state.selectedTap}
-        onClickingEdit={this.handleEditingClick}
-        />
+        <div>
+          <TapDetails 
+          tap={this.state.selectedTap}
+          onClickingEdit={this.handleEditingClick}
+          />
+        </div>
       );
       descriptionButtonText = "something else";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = (
-        <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
+        <div>
+          <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
+        </div>
       );
     } else {
       descriptionButtonText = "Add Tap";
     }
     return (
       <React.Fragment>
-        <TapList 
-        currentTapList={currentTapList}
-        onTapSelection={this.handleChangingSelectedTap} 
-        onChangingBeersSold={this.handleChangingBeersSold}
-        />
+        <div>
+          <TapList 
+          currentTapList={currentTapList}
+          onTapSelection={this.handleChangingSelectedTap} 
+          onChangingBeersSold={this.handleChangingBeersSold}
+          />
+        </div>
         {currentlyVisibleState}
-        <button onClick={this.handleButtonClick}>
-          {descriptionButtonText}
-        </button>
+        <div>
+          <button onClick={this.handleButtonClick}>
+            {descriptionButtonText}
+          </button>
+        </div>
       </React.Fragment>
     );  
   }
