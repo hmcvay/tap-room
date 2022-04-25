@@ -35,6 +35,7 @@ function ReusableForm(props) {
         name="beersSold"
         placeholder="0"
         min="0"
+        max="124"
         step="1"
         />
         <br />
