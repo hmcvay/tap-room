@@ -10,6 +10,7 @@ function TapList(props){
       whenTapClicked={props.onTapSelection}
       whenBeerSold={props.onChangingBeersSold} 
       name={tap.name}
+      brand={tap.brand}
       price={tap.price}
       abv={tap.abv}
       beersSold={tap.beersSold}
