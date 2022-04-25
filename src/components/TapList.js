@@ -6,20 +6,20 @@ function TapList(props){
   return (
     <React.Fragment>
       {props.currentTapList.map((tap) => (
-      <Tap
-      whenTapClicked={props.onTapSelection}
-      whenBeerSold={props.onChangingBeersSold} 
-      name={tap.name}
-      brand={tap.brand}
-      price={tap.price}
-      abv={tap.abv}
-      beersSold={tap.beersSold}
-      id={tap.id}
-      key={index} />
+        <Tap
+          whenTapClicked={props.onTapSelection}
+          whenBeerSold={props.onChangingBeersSold} 
+          name={tap.name}
+          brand={tap.brand}
+          price={tap.price}
+          abv={tap.abv}
+          beersSold={tap.beersSold}
+          id={tap.id}
+          key={tap.id} 
+        />
       ))}
-
     </React.Fragment>
-  )
+  );
 }
 
 TapList.propTypes = {
