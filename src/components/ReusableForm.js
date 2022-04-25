@@ -15,32 +15,32 @@ function ReusableForm(props) {
 
         <label htmlfor="abv">ABV: </label>
         <input 
-        type="number" 
-        name="abv" 
-        placeholder="%"
-        min="0"
-        step=".1"
+          type="number" 
+          name="abv" 
+          placeholder="%"
+          min="0"
+          step=".1"
         />
         <br />
 
         <label htmlfor="price">Price per pint: </label>
         <input 
-        type="number"
-        name="price"
-        placeholder="$"
-        min="0"
-        step=".5"
+          type="number"
+          name="price"
+          placeholder="$"
+          min="0"
+          step=".5"
         />
         <br />
 
         <label htmlFor="beersSold">Pints sold: </label>
         <input 
-        type="number"
-        name="beersSold"
-        placeholder="0"
-        min="0"
-        max="124"
-        step="1"
+          type="number"
+          name="beersSold"
+          placeholder="0"
+          min="0"
+          max="124"
+          step="1"
         />
         <br />
 

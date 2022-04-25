@@ -97,7 +97,7 @@ export class TapControl extends React.Component {
           />
         </div>
       );
-      descriptionButtonText = "something";
+      descriptionButtonText = "Don't Edit";
     } else if (this.state.selectedTap !== null) {
       currentlyVisibleState = (
         <div>
@@ -107,13 +107,14 @@ export class TapControl extends React.Component {
           />
         </div>
       );
-      descriptionButtonText = "something else";
+      descriptionButtonText = "Hide details";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = (
         <div>
           <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
         </div>
       );
+      descriptionButtonText = "Never mind";
     } else {
       descriptionButtonText = "Add Tap";
     }
