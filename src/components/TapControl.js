@@ -89,12 +89,22 @@ export class TapControl extends React.Component {
     let currentlyVisibleState = null;
     let descriptionButtonText = null;
     if (this.state.editing) {
-      currentlyVisibleState = {
-        <EditTapForm />
+      currentlyVisibleState = (
+        <EditTapForm
           tap={this.state.selectedTap}
           onEditTap={this.handleTapEditingInList}
-      
-      }
+        />
+      );
+      descriptionButtonText = "something";
+    } else if (this.state.selectedTap !== null) {
+      currentlyVisibleState = (
+        <TapDetails 
+        tap={this.state.selectedTap}
+        onClickingEdit={this.handleEditingClick}
+        />
+      );
+      descriptionButtonText = "something else";
+
     }
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = (
