@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 function Tap(props){
   const tapCardStyles = {
-    backgroundColor: 'black',
+    backgroundColor: '#323639',
     color: 'white',
     textAlign: 'center',
     width: '18rem',
@@ -17,9 +17,9 @@ function Tap(props){
     <React.Fragment>
       <Col>
         <div onClick={() => props.whenTapClicked(props.id)} >
-          <Card style={tapCardStyles}>
+          <Card id="single-card" style={tapCardStyles}>
             <Card.Body>
-              <Card.Title><strong>{props.name}</strong> 
+              <Card.Title><strong>{props.name.toUpperCase()}</strong> 
               <br />{props.brand}</Card.Title>
               <Card.Text>
                 <p>{props.style}</p>

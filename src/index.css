@@ -10,16 +10,58 @@ code {
     monospace;
 }
 
-.header-font {
+.header-styles {
   text-align: center;
   font-family: 'Libre Barcode 39 Text', cursive;
   font-size: 100pt;
   width: auto;
+  padding-top: 4%;
 }
 
 .big-info {
   font-size: 20pt;
   font-weight: bolder;
+}
+
+.list-styles {
+  margin-top: 4%;
+}
+
+.title {
+  font-family: 'Comfortaa', cursive;
+  padding-top: 6%;
+  /* padding-bottom: 2%; */
+  text-align: center;
+  transition: 0.3s;
+  letter-spacing: 15px;
+  
+}
+
+/* .title-text:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+} */
+
+.details-styles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#detail-card{
+  transition: 0.3s;
+}
+
+#detail-card:hover{
+  box-shadow: 0 5px 15px rgba(235, 235, 235, 0.8);
+}
+
+#single-card {
+  transition: 0.3s;
+}
+
+#single-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 /* .header-wrapper {

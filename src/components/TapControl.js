@@ -4,6 +4,7 @@ import NewTapForm from "./NewTapForm";
 import TapDetails from "./TapDetails";
 import EditTapForm from "./EditTapForm";
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
 class TapControl extends React.Component {
 
@@ -56,7 +57,7 @@ class TapControl extends React.Component {
           abv: 8.2,
           beersSold: 0,
           description:
-            "A hazy double IPA brewed in celebration of our anniversary! The nose is bright and snappy with Citra, Loral, and Chinook hops providing the juice that makes this particular naive melody groove. A springtime sipper with low alcohol warmth on the backend and everything else perfectly in it`'`s place. ",
+            "A hazy double IPA brewed in celebration of our anniversary! The nose is bright and snappy with Citra, Loral, and Chinook hops providing the juice that makes this particular naive melody groove. A springtime sipper with low alcohol warmth on the backend and everything else perfectly in it's place. ",
           id: 4,
           key: 4,
         }
@@ -167,9 +168,9 @@ class TapControl extends React.Component {
           </div>
           {currentlyVisibleState}
           <div>
-            <button onClick={this.handleButtonClick}>
+            <Button variant="outline light" onClick={this.handleButtonClick}>
               {descriptionButtonText}
-            </button>
+            </Button>
           </div>
       </React.Fragment>
     );  

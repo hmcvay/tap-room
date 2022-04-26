@@ -4,7 +4,7 @@ import './../index.css';
 function Header(){
 
   return(
-    <div className="header-font">
+    <div className="header-styles">
       <p>T A P R O O M</p>
     </div>
   )
