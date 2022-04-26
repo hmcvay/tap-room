@@ -7,7 +7,7 @@ function TapList(props){
   return (
     <React.Fragment>
       <Col>
-        <h1>Tap List:</h1>
+        <h1>taps</h1>
         {props.currentTapList.map((tap, index) => (
           <Tap
             whenTapClicked={props.onTapSelection}

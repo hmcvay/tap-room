@@ -6,14 +6,20 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 function App() {
+  const appStyles = {
+    backgroundColor: '#36454f',
+    color: 'white',
+  }
   return (
     <React.Fragment>
-      <Container>
-        <Header />
-        <Row> 
-          <TapControl />
-        </Row>  
-      </Container>
+      <div style={appStyles}>
+        <Container>
+          <Header />
+          <Row> 
+            <TapControl />
+          </Row>  
+        </Container>
+      </div>
     </React.Fragment>
   );
 }

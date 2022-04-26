@@ -6,8 +6,10 @@ import Button from 'react-bootstrap/Button';
 
 function Tap(props){
   const tapCardStyles = {
-    backgroundColor: '#dfebf5',
-    width: '16rem',
+    backgroundColor: 'black',
+    color: 'white',
+    textAlign: 'center',
+    width: '18rem',
     border: 'solid 1px',
     margin: '2%'
   }
@@ -17,7 +19,8 @@ function Tap(props){
         <div onClick={() => props.whenTapClicked(props.id)} >
           <Card style={tapCardStyles}>
             <Card.Body>
-              <Card.Title>{props.name} by {props.brand}</Card.Title>
+              <Card.Title><strong>{props.name}</strong> 
+              <br />{props.brand}</Card.Title>
               <Card.Text>
                 <p>${props.price} per pint | <em>{props.abv}% ABV</em></p>
                 <p>
@@ -26,7 +29,7 @@ function Tap(props){
                   ) : (
                     <span>
                       <p>{124 - props.beersSold} Pints remaining</p>
-                      <p><Button variant="outline-dark" onClick={() => props.whenBeerSold(props.id, 1)}>Sell Pint</Button>
+                      <p><Button variant="outline-light" onClick={() => props.whenBeerSold(props.id, 1)}>Sell Pint</Button>
                       </p>
                     </span>  
                   )}  
