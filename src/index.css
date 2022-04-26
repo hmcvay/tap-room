@@ -1,3 +1,11 @@
+html, body, .App {
+  height: 100%
+}
+
+.App {
+  display: flex;
+}
+
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif !important;
@@ -15,7 +23,7 @@ code {
   font-family: 'Libre Barcode 39 Text', cursive;
   font-size: 100pt;
   width: auto;
-  padding-top: 4%;
+  padding-top: 1%;
 }
 
 .big-info {
@@ -24,13 +32,12 @@ code {
 }
 
 .list-styles {
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 .title {
   font-family: 'Comfortaa', cursive;
-  padding-top: 6%;
-  /* padding-bottom: 2%; */
+  padding-bottom: 2%;
   text-align: center;
   transition: 0.3s;
   letter-spacing: 15px;
@@ -70,17 +77,11 @@ code {
 #single-card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
-
-/* .header-wrapper {
+ 
+#main-button {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
-
-.body-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-} */

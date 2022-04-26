@@ -3,6 +3,10 @@
 
 <br>
 
+<img src="app.png" width="auto" />
+
+<br>
+
 ### This project uses a taproom inventory management system as a practice in React fundamentals.
 
 <br>
@@ -10,7 +14,7 @@
 ## App Diagram
 
 <br>
-<img src="app-diagram.png" width="auto">
+<img src="app-diagram.png" width="auto" />
 
 <br>
 

@@ -49,13 +49,13 @@ function Tap(props){
                   {props.beersSold >= 124 ? (
                       <span>
                       <p> <span className="big-info">{124 - props.beersSold}</span> Pints remaining</p>
-                      <img className="keg-image" src={kegLevel()} />
+                      <img className="keg-image" src={kegLevel()} alt="empty keg icon" />
                       <Button variant="outline-dark">Sell Pint</Button>
                     </span> 
                   ) : (
                     <span>
                       <p> <span className="big-info">{124 - props.beersSold}</span> Pints remaining</p>
-                      <img className="keg-image" src={kegLevel()} />
+                      <img className="keg-image" src={kegLevel()} alt="keg icon" />
                       <Button variant="outline-light" onClick={() => props.whenBeerSold(props.id, 1)}>Sell Pint</Button>
                     </span>  
                   )}  

@@ -159,19 +159,18 @@ class TapControl extends React.Component {
       }
       return (
         <React.Fragment>
-          <div className="tap-list-wrapper">
-            <TapList 
-            currentTapList={currentTapList}
-            onTapSelection={this.handleChangeSelectedTap} 
-            onChangingBeersSold={this.handleChangingBeersSold}
-            />
-          </div>
-          {currentlyVisibleState}
-          <div>
-            <Button variant="outline light" onClick={this.handleButtonClick}>
+          <TapList 
+          currentTapList={currentTapList}
+          onTapSelection={this.handleChangeSelectedTap} 
+          onChangingBeersSold={this.handleChangingBeersSold}
+          />
+          <div id="main-button">
+            <Button variant="outline-light" onClick={this.handleButtonClick}>
               {descriptionButtonText}
             </Button>
           </div>
+          {currentlyVisibleState}
+        
       </React.Fragment>
     );  
   }
