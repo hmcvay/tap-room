@@ -50,7 +50,7 @@ function Tap(props){
                       <span>
                       <p> <span className="big-info">{124 - props.beersSold}</span> Pints remaining</p>
                       <img className="keg-image" src={kegLevel()} />
-                      <Button variant="outline-light">Sell Pint</Button>
+                      <Button variant="outline-dark">Sell Pint</Button>
                     </span> 
                   ) : (
                     <span>

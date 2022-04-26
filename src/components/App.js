@@ -9,6 +9,7 @@ function App() {
   const appStyles = {
     backgroundColor: '#36454f',
     color: 'white',
+    height: '100vh',
   }
   return (
     <React.Fragment>
