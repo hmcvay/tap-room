@@ -1,10 +1,7 @@
 # Taproom
-## By Hayley McVay
-
-<br>
-
 <img src="app.png" width="auto" />
 
+## By Hayley McVay
 <br>
 
 ### This project uses a taproom inventory management system as a practice in React fundamentals.
@@ -22,6 +19,8 @@
 
 * React
 * Javascript
+* HTML
+* CSS
 
 <br>
 
