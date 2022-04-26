@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "./Header";
 import TapControl from "./TapControl";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
 
 function App() {
   return (
     <React.Fragment>
-      <div className="header-wrapper">
+      <Container>
         <div><Header /></div>
-      </div>
-      <div className="body-wrapper">
         <div><TapControl /></div>   
-      </div>
+      </Container>
     </React.Fragment>
   );
 }
