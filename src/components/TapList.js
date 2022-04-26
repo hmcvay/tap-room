@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function TapList(props){
   return (
     <React.Fragment>
-      {props.currentTapList.map((tap) => (
+      {props.currentTapList.map((tap, index) => (
         <Tap
           whenTapClicked={props.onTapSelection}
           whenBeerSold={props.onChangingBeersSold} 

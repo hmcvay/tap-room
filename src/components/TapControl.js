@@ -5,7 +5,7 @@ import TapDetails from "./TapDetails";
 import EditTapForm from "./EditTapForm";
 
 class TapControl extends React.Component {
-  
+
   constructor() {
     super();
     this.state = {
@@ -121,7 +121,7 @@ class TapControl extends React.Component {
         <div>
           <TapList 
           currentTapList={currentTapList}
-          onTapSelection={this.handleChangingSelectedTap} 
+          onTapSelection={this.handleChangeSelectedTap} 
           onChangingBeersSold={this.handleChangingBeersSold}
           />
         </div>
