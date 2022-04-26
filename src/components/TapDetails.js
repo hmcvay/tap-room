@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const tapCardStyles = {
   backgroundColor: '#dfebf5',
@@ -14,17 +15,19 @@ function TapDetails(props) {
   const { tap, onClickingEdit } = props;
   return(
     <React.Fragment>
-      <h1>Tap Details:</h1>
       <Col>
+        <h1>Tap Details:</h1>
         <Card style={tapCardStyles}>
-          <h3>
-            {tap.name}: {tap.brand}
-          </h3>
-          <p>
-            {tap.abv}% ABV
-          </p>
-          <p>{tap.description}</p>
-          <button onClick={onClickingEdit}>Edit Tap</button>
+          <Card.Body>
+            <Card.Title>{tap.name}: {tap.brand}</Card.Title>
+            <Card.Text>
+              <p>
+                {tap.abv}% ABV
+              </p>
+              <p>{tap.description}</p>
+              <Button variant="outline-dark" onClick={onClickingEdit}>Edit Tap</Button>
+            </Card.Text>
+          </Card.Body>
         </Card>
       </Col>
     </React.Fragment>

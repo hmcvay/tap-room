@@ -1,10 +1,12 @@
 import React from "react";
+import './../index.css';
 
 function Header(){
+
   return(
-    <React.Fragment>
-      <h1>HEADER</h1>
-    </React.Fragment>
+    <div className="header-font">
+      <p>T A P R O O M</p>
+    </div>
   )
 }
 

@@ -3,6 +3,7 @@ import TapList from "./TapList";
 import NewTapForm from "./NewTapForm";
 import TapDetails from "./TapDetails";
 import EditTapForm from "./EditTapForm";
+import Row from 'react-bootstrap/Row';
 
 class TapControl extends React.Component {
 
@@ -99,10 +100,12 @@ class TapControl extends React.Component {
       } else if (this.state.selectedTap !== null) {
         currentlyVisibleState = (
           <div>
-            <TapDetails 
-            tap={this.state.selectedTap}
-            onClickingEdit={this.handleEditingClick}
-            />
+            <Row>
+              <TapDetails 
+              tap={this.state.selectedTap}
+              onClickingEdit={this.handleEditingClick}
+              />
+            </Row>
           </div>
         );
         descriptionButtonText = "Hide details";

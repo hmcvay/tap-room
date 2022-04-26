@@ -3,13 +3,16 @@ import Header from "./Header";
 import TapControl from "./TapControl";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 function App() {
   return (
     <React.Fragment>
       <Container>
-        <div><Header /></div>
-        <div><TapControl /></div>   
+        <Header />
+        <Row> 
+          <TapControl />
+        </Row>  
       </Container>
     </React.Fragment>
   );
