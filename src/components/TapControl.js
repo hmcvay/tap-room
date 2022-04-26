@@ -22,10 +22,43 @@ class TapControl extends React.Component {
           description:
             "A classic rendition of a Belgian wit, The White Lodge is brewed with a large portion of wheat along with pilsner malt and oats. We use coriander and orange peel in the kettle, lending a blend of citrus and floral characters, and ferment with a traditional Belgian strain.",
           id: 1,
-          key: 4,
+          key: 1,
         },
         {
-          name: ""
+          name: "Doggie Claws",
+          brand: "Hair of the Dog",
+          style: "Barleywine",
+          price: 7,
+          abv: 11.5,
+          beersSold: 0,
+          description:
+            "Candied ginger and hops in the aroma. This beer has moderate carbonation and deep amber hue. The flavors of pine and orange mingle with young alcohol and hop bitterness.",
+          id: 2,
+          key: 2,
+        },
+        {
+          name: "Burned Bridges",
+          brand: "Ex Novo",
+          style: "West Coast IPA",
+          price: 8,
+          abv: 6.2,
+          beersSold: 0,
+          description:
+            "A crisp West Coast style IPA brewed with Ekuanot cyro, Amarillo & Columbus hops. Notes of floral citrus, honeysuckle, pine & stone fruit. Finishes with a firm & clean balanced bitterness.",
+          id: 3,
+          key: 3,
+        },
+        {
+          name: "This Must be the Place",
+          brand: "Wander Brewing",
+          style: "Hazy DIPA",
+          price: 6,
+          abv: 8.2,
+          beersSold: 0,
+          description:
+            "A hazy double IPA brewed in celebration of our anniversary! The nose is bright and snappy with Citra, Loral, and Chinook hops providing the juice that makes this particular naive melody groove. A springtime sipper with low alcohol warmth on the backend and everything else perfectly in it`'`s place. ",
+          id: 4,
+          key: 4,
         }
       ],
       selectedTap: null,
