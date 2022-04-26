@@ -20,10 +20,10 @@ function NewTapForm(props) {
 
   return(
     <React.Fragment>
-      <ReusableForm
-        formSubmissionHandler={handleNewTapFormSubmission}
-        buttonText="Add Tap"
-      />
+        <ReusableForm
+          formSubmissionHandler={handleNewTapFormSubmission}
+          buttonText="Add Tap"
+        />
     </React.Fragment>
   );
 }

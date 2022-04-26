@@ -38,18 +38,6 @@ class TapControl extends React.Component {
           key: 2,
         },
         {
-          name: "Burned Bridges",
-          brand: "Ex Novo",
-          style: "West Coast IPA",
-          price: 8,
-          abv: 6.2,
-          beersSold: 0,
-          description:
-            "A crisp West Coast style IPA brewed with Ekuanot cyro, Amarillo & Columbus hops. Notes of floral citrus, honeysuckle, pine & stone fruit. Finishes with a firm & clean balanced bitterness.",
-          id: 3,
-          key: 3,
-        },
-        {
           name: "This Must be the Place",
           brand: "Wander Brewing",
           style: "Hazy DIPA",
@@ -58,8 +46,8 @@ class TapControl extends React.Component {
           beersSold: 0,
           description:
             "A hazy double IPA brewed in celebration of our anniversary! The nose is bright and snappy with Citra, Loral, and Chinook hops providing the juice that makes this particular naive melody groove. A springtime sipper with low alcohol warmth on the backend and everything else perfectly in it's place. ",
-          id: 4,
-          key: 4,
+          id: 3,
+          key: 3,
         }
       ],
       selectedTap: null,
@@ -127,12 +115,10 @@ class TapControl extends React.Component {
       let descriptionButtonText = null;
       if (this.state.editing) {
         currentlyVisibleState = (
-          <div className="form-wrapper">
-            <EditTapForm
-              tap={this.state.selectedTap}
-              onEditTap={this.handleTapEditingInList}
-            />
-          </div>
+          <EditTapForm
+            tap={this.state.selectedTap}
+            onEditTap={this.handleTapEditingInList}
+          />
         );
         descriptionButtonText = "Don't Edit";
       } else if (this.state.selectedTap !== null) {
@@ -149,9 +135,7 @@ class TapControl extends React.Component {
         descriptionButtonText = "Hide details";
       } else if (this.state.formVisibleOnPage) {
         currentlyVisibleState = (
-          <div className="form-wrapper">
-            <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
-          </div>
+          <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
         );
         descriptionButtonText = "Never mind";
       } else {
