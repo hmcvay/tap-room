@@ -27,7 +27,7 @@ function Tap(props){
       return quarter;
     } else if (props.beersSold >=62){
       return half;
-    } else if (props.beersSold <= 31){
+    } else if (props.beersSold >= 31){
       return threequarter;
     } else if(props.beersSold >= 0) {
       return full;
@@ -47,13 +47,16 @@ function Tap(props){
                 <p>${props.price} per pint | <em>{props.abv}% ABV</em></p>
                 <p>
                   {props.beersSold >= 124 ? (
-                    <span className="big-info">Sorry, all out!</span>
+                      <span>
+                      <p> <span className="big-info">{124 - props.beersSold}</span> Pints remaining</p>
+                      <img className="keg-image" src={kegLevel()} />
+                      <Button variant="outline-light">Sell Pint</Button>
+                    </span> 
                   ) : (
                     <span>
                       <p> <span className="big-info">{124 - props.beersSold}</span> Pints remaining</p>
                       <img className="keg-image" src={kegLevel()} />
-                      <p><Button variant="outline-light" onClick={() => props.whenBeerSold(props.id, 1)}>Sell Pint</Button>
-                      </p>
+                      <Button variant="outline-light" onClick={() => props.whenBeerSold(props.id, 1)}>Sell Pint</Button>
                     </span>  
                   )}  
                 </p>
