@@ -83,54 +83,54 @@ class TapControl extends React.Component {
   };
 
   render() {
-    const currentTapList = this.state.mainTapList;
-    let currentlyVisibleState = null;
-    let descriptionButtonText = null;
-    if (this.state.editing) {
-      currentlyVisibleState = (
-        <div>
-          <EditTapForm
+      const currentTapList = this.state.mainTapList;
+      let currentlyVisibleState = null;
+      let descriptionButtonText = null;
+      if (this.state.editing) {
+        currentlyVisibleState = (
+          <div className="form-wrapper">
+            <EditTapForm
+              tap={this.state.selectedTap}
+              onEditTap={this.handleTapEditingInList}
+            />
+          </div>
+        );
+        descriptionButtonText = "Don't Edit";
+      } else if (this.state.selectedTap !== null) {
+        currentlyVisibleState = (
+          <div>
+            <TapDetails 
             tap={this.state.selectedTap}
-            onEditTap={this.handleTapEditingInList}
-          />
-        </div>
-      );
-      descriptionButtonText = "Don't Edit";
-    } else if (this.state.selectedTap !== null) {
-      currentlyVisibleState = (
-        <div>
-          <TapDetails 
-          tap={this.state.selectedTap}
-          onClickingEdit={this.handleEditingClick}
-          />
-        </div>
-      );
-      descriptionButtonText = "Hide details";
-    } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = (
-        <div>
-          <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
-        </div>
-      );
-      descriptionButtonText = "Never mind";
-    } else {
-      descriptionButtonText = "Add Tap";
-    }
-    return (
-      <React.Fragment>
-        <div>
-          <TapList 
-          currentTapList={currentTapList}
-          onTapSelection={this.handleChangeSelectedTap} 
-          onChangingBeersSold={this.handleChangingBeersSold}
-          />
-        </div>
-        {currentlyVisibleState}
-        <div>
-          <button onClick={this.handleButtonClick}>
-            {descriptionButtonText}
-          </button>
-        </div>
+            onClickingEdit={this.handleEditingClick}
+            />
+          </div>
+        );
+        descriptionButtonText = "Hide details";
+      } else if (this.state.formVisibleOnPage) {
+        currentlyVisibleState = (
+          <div className="form-wrapper">
+            <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
+          </div>
+        );
+        descriptionButtonText = "Never mind";
+      } else {
+        descriptionButtonText = "Add Tap";
+      }
+      return (
+        <React.Fragment>
+          <div className="tap-list-wrapper">
+            <TapList 
+            currentTapList={currentTapList}
+            onTapSelection={this.handleChangeSelectedTap} 
+            onChangingBeersSold={this.handleChangingBeersSold}
+            />
+          </div>
+          {currentlyVisibleState}
+          <div>
+            <button onClick={this.handleButtonClick}>
+              {descriptionButtonText}
+            </button>
+          </div>
       </React.Fragment>
     );  
   }

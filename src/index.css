@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.header-wrapper {
+/* .header-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,4 +24,4 @@ code {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
+} */
