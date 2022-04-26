@@ -9,6 +9,7 @@ function NewTapForm(props) {
     props.onNewTapCreation({
       name: event.target.name.value,
       brand: event.target.brand.value,
+      style: event.target.style.value,
       abv: parseFloat(event.target.abv.value),
       price: parseFloat(event.target.price.value),
       description: (event.target.description.value),

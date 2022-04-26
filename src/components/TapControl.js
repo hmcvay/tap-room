@@ -14,6 +14,7 @@ class TapControl extends React.Component {
       mainTapList: [
         {
           name: "The White Lodge",
+          style: "Witbier",
           brand: "Holy Mountain Brewing",
           price: 7,
           abv: 4.8,
@@ -23,6 +24,9 @@ class TapControl extends React.Component {
           id: 1,
           key: 4,
         },
+        {
+          name: ""
+        }
       ],
       selectedTap: null,
       editing: false

@@ -1,12 +1,12 @@
 import React from "react";
 import Tap from "./Tap";
 import PropTypes from "prop-types";
-import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function TapList(props){
   return (
     <React.Fragment>
-      <Col>
+      <Row>
         <h1>taps</h1>
         {props.currentTapList.map((tap, index) => (
           <Tap
@@ -14,6 +14,7 @@ function TapList(props){
             whenBeerSold={props.onChangingBeersSold} 
             name={tap.name}
             brand={tap.brand}
+            style={tap.style}
             price={tap.price}
             abv={tap.abv}
             beersSold={tap.beersSold}
@@ -21,7 +22,7 @@ function TapList(props){
             key={tap.id} 
           />
         ))}
-      </Col>
+      </Row>
     </React.Fragment>
   );
 }

@@ -17,6 +17,11 @@ code {
   width: auto;
 }
 
+.big-info {
+  font-size: 20pt;
+  font-weight: bolder;
+}
+
 /* .header-wrapper {
   display: flex;
   flex-direction: column;

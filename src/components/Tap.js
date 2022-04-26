@@ -22,13 +22,14 @@ function Tap(props){
               <Card.Title><strong>{props.name}</strong> 
               <br />{props.brand}</Card.Title>
               <Card.Text>
+                <p>{props.style}</p>
                 <p>${props.price} per pint | <em>{props.abv}% ABV</em></p>
                 <p>
                   {props.beersSold >= 124 ? (
-                    <span>Sorry, all out!</span>
+                    <span className="big-info">Sorry, all out!</span>
                   ) : (
                     <span>
-                      <p>{124 - props.beersSold} Pints remaining</p>
+                      <p> <span className="big-info">{124 - props.beersSold}</span> Pints remaining</p>
                       <p><Button variant="outline-light" onClick={() => props.whenBeerSold(props.id, 1)}>Sell Pint</Button>
                       </p>
                     </span>  
@@ -50,6 +51,7 @@ Tap.defaultProps = {
 Tap.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
+  style: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   abv: PropTypes.number.isRequired,
   beersSold: PropTypes.number,

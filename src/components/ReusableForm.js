@@ -13,6 +13,10 @@ function ReusableForm(props) {
         <input type="text" name="brand" placeholder="Brand" />
         <br />
 
+        <label htmlfor="style">Style: </label>
+        <input type="text" name="style" placeholder="Style" />
+        <br />
+
         <label htmlfor="abv">ABV: </label>
         <input 
           type="number" 
