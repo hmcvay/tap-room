@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 function ReusableForm(props) {
 
   const reuseForm = {
+    padding: '2%',
     backgroundColor: '#323639',
     color: 'white',
     // textAlign: 'center',
@@ -19,33 +20,33 @@ function ReusableForm(props) {
       <div style={reuseForm}>
         <Form onSubmit={props.formSubmissionHandler}>
           <Form.Group controlId="reusableForm">
-            <Form.Label htmlfor="name">Name: </Form.Label>
+            {/* <Form.Label htmlfor="name">Name: </Form.Label> */}
             <Form.Control type="text" name="name" placeholder="Name" />
             <br />
 
-            <Form.Label htmlfor="brand">Brand: </Form.Label>
+            {/* <Form.Label htmlfor="brand">Brand: </Form.Label> */}
             <Form.Control type="text" name="brand" placeholder="Brand" />
             <br />
 
-            <Form.Label htmlfor="style">Style: </Form.Label>
+            {/* <Form.Label htmlfor="style">Style: </Form.Label> */}
             <Form.Control type="text" name="style" placeholder="Style" />
             <br />
 
-            <Form.Label htmlfor="abv">ABV: </Form.Label>
+            {/* <Form.Label htmlfor="abv">ABV: </Form.Label> */}
             <Form.Control 
               type="number" 
               name="abv" 
-              placeholder="%"
+              placeholder="ABV%"
               min="0"
               step=".1"
             />
             <br />
 
-            <Form.Label htmlfor="price">Price per pint: </Form.Label>
+            {/* <Form.Label htmlfor="price">Price per pint: </Form.Label> */}
             <Form.Control 
               type="number"
               name="price"
-              placeholder="$"
+              placeholder="$/Pint"
               min="0"
               step=".5"
             />
@@ -62,7 +63,7 @@ function ReusableForm(props) {
             />
             <br />
 
-            <Form.Label htmlFor="description">Description: </Form.Label>
+            {/* <Form.Label htmlFor="description">Description: </Form.Label> */}
             <Form.Control name="description" placeholder="Description" />
             <br />
 
